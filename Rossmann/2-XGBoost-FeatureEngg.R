@@ -102,6 +102,8 @@ xgbcv <- xgb.cv(data = merged_train_matrix, label = Sales,
  
 # Determine 'Global-minimum' number of rounds required for the model
 nround <- which(xgbcv$test.mlogloss.mean == min(xgbcv$test.mlogloss.mean))
+####this code linde above shows an error when I run that
+
 
 # Develop a model using XGBoost and the above params / objects
 xgb_model <- xgboost(data = merged_train_matrix,
